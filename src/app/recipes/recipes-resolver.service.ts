@@ -16,6 +16,7 @@ export class RecipesResolverService implements Resolve<Recipe[]> {
               private actions$: Actions) {
   }
 
+  // @ts-ignore
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     this.store.select('recipes').pipe(
       take(1),
